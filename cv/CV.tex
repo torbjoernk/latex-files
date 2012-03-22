@@ -1,0 +1,108 @@
+\documentclass[11pt,a4paper,roman]{moderncv}
+\moderncvtheme[grey]{casual}
+\usepackage{ngerman}
+\usepackage[T1]{fontenc}
+\usepackage[utf8x]{inputenc}
+\usepackage{amsmath,amsfonts,amssymb,amsthm}
+\usepackage{graphicx}
+
+\date{\today}
+
+\firstname      {FIRST_NAME}
+\familyname     {LAST_NAME}
+\address        {STREET_NAME HOUSE_NUMBER}
+                {POST_CODE CITY_NAME}
+\phone          {LANDLINE_PHONE_NUMBER}
+\mobile         {MOBILE_PHONE_NUMBER}
+\email          {EMAIL_ADDRESS}
+\homepage       {HOMEPAGE_ADDRESS}
+
+\renewcommand\refname{Publikationen}
+
+\begin{document}
+\maketitle
+
+
+\section{Pers\"onliche Daten}
+\cvline     {Geburtstag}
+            {DATUM in PLACE}
+
+
+\section{Bildung}
+\cventry    {VON$\qquad\qquad$\\
+             \includegraphics{newlineReflected.pdf} $\quad$BIS}
+            {DEGREE_NAME_AND_TITLE}
+            {UNIVERISTY_NAME}
+            {CITY}
+            {}
+            {E.G._SPECIALISATION}
+
+
+\section{Abschlussarbeiten}
+\subsection{Bachelor Arbeit}
+\cvline      {Titel}
+            {\emph{TITEL_OF_BACHELOR_THESIS}}
+\cvline      {Betreuer}
+            {SUPERVISER_NAME_AND_TITLE}
+\cvline      {Institut}
+            {INSTITUTE_OR_UNIVERSITY_NAME}
+
+
+\section{Erfahrung}
+\subsection{Beruflich}
+\cventry    {VON$\qquad\qquad$\\
+             \includegraphics{newlineReflected.pdf} $\quad$BIS}
+            {JOB_TITLE}
+            {GROUP_NAME}
+            {COMPANY_AND_PLACE}
+            {}
+            {WHAT_WAS_YOUR_TASK}
+
+
+\subsection{Ehrenamtlich}
+\cventry    {VON$\qquad\qquad$\\
+             \includegraphics{newlineReflected.pdf} $\quad$BIS}
+            {JOB_TITLE}
+            {GROUP_NAME}
+            {COMPANY_AND_PLACE}
+            {}
+            {WHAT_WAS_YOUR_TASK}
+         
+
+\section{Stipendien und Auszeichnungen}
+\cvline      {YEAR$\qquad\qquad\quad$}
+            {SCHOLARSHIP_TITLE}
+
+
+\section{Sprachen}
+\cvlanguage  {Deutsch}
+            {Muttersprache}
+            {}
+\cvlanguage  {Englisch}
+            {Fließend}
+            {MONTH/YEAR: FINAL_EXAM_TITLE}
+
+
+\section{Computerkenntnisse}
+\cvcomputer  {Sprachen}
+            {Bash, C++, Java, \LaTeX, R, SQL}
+            {}
+            {}
+\cvcomputer  {Software}
+            {Eclipse, MATLAB, Vim}
+            {}
+            {}
+\cvcomputer  {Betriebssysteme}
+            {Linux, Microsoft Windows}
+            {}
+            {}
+
+\nocite{*}
+\bibliographystyle{plain}
+\bibliography{Publikationen} % a BibTeX file called 'Publikationen.bib' is required here
+
+\section{Referenzen}
+\cvline      {NAME_AND_TITLE}
+            {FULL_ADDRESS_WITH_NEWLINE_COMMAND}
+             
+\end{document}
