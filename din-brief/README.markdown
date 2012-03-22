@@ -27,5 +27,6 @@ If you like to modify the header and / or footer of the letter, do it here.
 Configuration of the page layout.
 
 ##Source
-Somewhere on the internet. Unfortunately, I cannot remember where. I'll be happy, somebody can 
-enlighten me.
+Original version was retreived from [Matthias Pospiech](http://www.matthiaspospiech.de/latex/vorlagen/)
+([`Brief.zip`](http://www.matthiaspospiech.de/download/latex/vorlagen/brief/Brief.zip)).
+This here is a modified version by my self.
