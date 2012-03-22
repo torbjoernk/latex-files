@@ -1,0 +1,94 @@
+\ProvidesFile{headerfooter.lco}%
+\addtokomafont{pageheadfoot}{\scriptsize}
+\addtolength{\headsep}{2em}
+\addtolength{\textheight}{-2em}
+
+%% create the header
+\newcommand*{\myhead}{%
+  \begin{minipage}[t]{\useplength{firstfootwidth}}
+    \begin{tabular}{l}
+      \usekomavar{fromlogo}
+    \end{tabular}
+    \hfill
+    \begin{tabular}[t]{r}
+      \color{moderncvcolor2}\Large\textsc{\usekomavar{fromname}}\\
+      \normalfont\color{moderncvcolor2}\scriptsize\usekomavar{fromstreet} $\cdot$ \usekomavar{fromcity}
+    \end{tabular}\\
+    {\color{moderncvcolor1}\rule{\useplength{firstfootwidth}}{2pt}}\\
+  \end{minipage}\\[1em]
+}
+\firsthead{\usekomafont{pageheadfoot}\myhead}
+\nexthead{\usekomafont{pageheadfoot}%
+  \hspace*{-\oddsidemargin}\hspace{-1in}%
+  \hspace{\useplength{toaddrhpos}}
+  \myhead%
+}
+
+%% create the footer
+\newcommand*{\myphone}{%
+  \begin{tabular}[t]{ll}%
+    \ifkomavarempty{fromphone}{}{%
+      Telefon: & \usekomavar{fromphone}%
+      \ifkomavarempty{frommobile}{}{%
+        \\
+      }
+    }
+    \ifkomavarempty{frommobile}{}{%
+      Mobil: & \usekomavar{frommobile}%
+    }
+  \end{tabular}%
+}
+\newcommand*{\myemailsite}{%
+  \begin{tabular}[t]{ll}%
+    \ifkomavarempty{fromemail}{}{%
+      E-Mail: & \usekomavar{fromemail}%
+      \ifkomavarempty{fromurl}{}{%
+        \\
+      }
+    }
+    \ifkomavarempty{fromurl}{}{%
+      Website: & \usekomavar{fromurl}%
+    }
+  \end{tabular}\hfill
+}
+\newcommand*{\myfoot}{\normalfont%
+  \begin{minipage}[t]{\useplength{firstfootwidth}}
+    {\color{moderncvcolor1}\rule{\useplength{firstfootwidth}}{.4pt}}\\
+    \ifkomavarempty{fromemail}{%
+      \ifkomavarempty{fromurl}{}{%
+        \color{moderncvcolor2}\myemailsite
+      }
+    }{%
+      \color{moderncvcolor2}\myemailsite
+    }
+    \ifkomavarempty{frombank}{}{\color{moderncvcolor2}%
+      Konto: \begin{tabular}[t]{@{}l@{~}l@{}}%
+        \usekomavar{frombank}%
+      \end{tabular}\hfill
+    }
+    \ifkomavarempty{fromphone}{%
+      \ifkomavarempty{frommobile}{}{%
+        \color{moderncvcolor2}\myphone
+      }
+    }{%
+      \color{moderncvcolor2}\myphone
+    }
+  \end{minipage}\\[1em]
+}
+\firstfoot{%
+  \usekomafont{pageheadfoot}\strut
+  \parbox[t]{\useplength{firstfootwidth}}{%
+    \myfoot%
+  }%
+}
+\nextfoot{%
+  \usekomafont{pageheadfoot}%
+  \hspace*{-\oddsidemargin}\hspace{-1in}%
+  \hspace{\useplength{toaddrhpos}}\strut
+  \parbox[t]{\useplength{firstfootwidth}}{%
+    \centering\pagename~\thepage\\[-\dp\strutbox]
+    \myfoot%
+  }%
+}
+
+\endinput

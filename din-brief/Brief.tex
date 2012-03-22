@@ -1,0 +1,98 @@
+% DIN-Brief Vorlage von http://www.matthiaspospiech.de/latex/vorlagen/
+% Modifiziert von Torbjoern Klatt
+
+\documentclass[fontsize=12pt,           % Schriftgroesse
+               paper=a4,                % Papier
+               DIV=14,                  % Seitengroesse (siehe Koma Skript Dokumentation!)
+               BCOR=5mm,                % zusaetzlicher Rand auf der Innenseite
+               pagenumber=footcenter,   %
+               parskip=half*,           %
+               german                   % Sprache
+              ]{scrlttr2}               % Klassen: scrartcl, scrreprt, scrbook, scrletter
+
+\KOMAoptions{fromalign=left,            %
+             fromrule=afteraddress,     %
+             fromphone=false,           %
+             fromemail=false,           %
+             fromurl=false,             %
+             foldmarks=true,            %
+             backaddress=true,          %
+             addrfield=true,            %
+%              footsepline=true,          %
+%              headsepline=true           %
+             enlargefirstpage=true}
+
+%% Schriften ===================================================================================
+\input{incl/Fonts}                      % Schriftarten dort aendern
+
+
+% *** Sprache *****************************
+\usepackage[ngerman]{babel}
+\usepackage[T1]{fontenc}
+\usepackage[ansinew]{inputenc}
+%------------------------------------------
+
+%% Seitenlayout ================================================================================
+%
+
+%% Farbset wie für Moderncv
+\usepackage{color}
+%% Blau
+\definecolor{moderncvcolor1}{rgb}{0.20,0.40,0.65}
+\definecolor{moderncvcolor2}{rgb}{0.25,0.50,0.75}
+%% Orange
+%\definecolor{moderncvcolor1}{rgb}{1.00,0.65,0.20}    
+%\definecolor{moderncvcolor2}{rgb}{0.95,0.55,0.15}
+%% Gruen
+%\definecolor{moderncvcolor1}{rgb}{0.55,0.85,0.35}    
+%\definecolor{moderncvcolor2}{rgb}{0.30,0.65,0.15}
+%% Rot
+%\definecolor{moderncvcolor1}{rgb}{1.00,0.30,0.30}    
+%\definecolor{moderncvcolor2}{rgb}{0.95,0.20,0.20}
+%% Grau
+%\definecolor{moderncvcolor1}{rgb}{0.75,0.75,0.75}    
+%\definecolor{moderncvcolor2}{rgb}{0.35,0.35,0.35}
+
+\LoadLetterOption{DIN}
+% \LoadLetterOption{incl/dateup}        % aktivieren fuer Datum oben buendig mit Adressfeld
+\LoadLetterOption{incl/fromaddress}
+\LoadLetterOption{incl/headerfooter}
+
+\usepackage{typearea}
+
+% -- Kopfzeilen ---
+\usepackage[automark, nouppercase]{scrpage2}
+\pagestyle{headings}
+% ----------------------------------------------------------------------------------------------
+
+
+%% sonstige Pakete =============================================================================
+\usepackage{graphicx}
+
+% ----------------------------------------------------------------------------------------------
+
+\begin{document}
+%%==============================================================================================
+\begin{letter}{Empf\"anger}
+\setkomavar{toname}{Empf\"anger Name}
+\setkomavar{toaddress}{Empf\"anger Stra\ss{}e\\Empf\"anger Stadt}
+
+\setkomavar{place}{Ort}
+\setkomavar{date}{\today}
+\setkomavar{subject}{Betreff}
+\setkomavar{signature}{\itshape(\usekomavar{fromname})}
+
+\opening{Sehr geehrte Damen und Herrn,}
+
+der Text
+
+\closing{Mit freundlichen Gr\"u\ss{}en}
+% \closing{Mit freundlichen Gr\"u\ss{}en\\[1ex]\includegraphics[scale=0.6]{incl/Unterschrift.pdf}\\[-3\baselineskip]}
+
+\encl{Anh\"ange}                        % wenn keine Anhaenge, dann auskommentieren
+
+\end{letter}
+%%==============================================================================================
+\end{document}
+
+

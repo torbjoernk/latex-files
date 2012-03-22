@@ -1,0 +1,17 @@
+\ProvidesFile{fromaddress.lco}%
+\setkomavar{fromname}{FIRST_NAME LAST_NAME}
+\newkomavar{fromstreet}
+\setkomavar{fromstreet}{STREET_NAME_AND_HOUSE_NUMBER}
+\newkomavar{fromcity}
+\setkomavar{fromcity}{POSTCODE_AND_CITIY_NAME}
+\setkomavar{fromaddress}{\usekomavar{fromstreet}\\\usekomavar{fromcity}}
+\setkomavar{fromphone}{+COUNTRY_CODE~LANDLINE_PHONE_NUMBER}
+\newkomavar{frommobile}
+\setkomavar{frommobile}{+COUNTRY_CODE~MOBILE_PHONE_NUMBER}
+\setkomavar{fromurl}{http://www.EXAMPLE.DOMAIN}
+\setkomavar{fromemail}{EXAMPLE@EMAIL.ADRESS}
+%\setkomavar{frombank}{BANK_NAME\\ACCOUNT_NUMBER}
+\setkomavar{frombank}{}
+%\setkomavar{fromlogo}{\includegraphics[height=1cm]{incl/Logo.pdf}}
+\setkomavar{fromlogo}{}
+\endinput
