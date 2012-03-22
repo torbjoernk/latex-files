@@ -1,6 +1,9 @@
 #German DIN Letter
 A template for a German DIN letter with _four colour sets_ (blue, orange, green, grey),
 _various font types_ and _easy modifications of the header and footer_.
+The four colour sets are the same provided by the _moderncv_ class.
+Thus this DIN letter template can be perfectly used in combination with a Curriculum Vitae using
+the template provided in this repository: `../cv`.
 
 ##Files
 ###Brief.tex
